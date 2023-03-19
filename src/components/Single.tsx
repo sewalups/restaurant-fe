@@ -16,7 +16,7 @@ const Single:React.FC<IPropsSingle> = ({restaurant}) => {
                     <span className="p-2 mb-2 text-sm"> Address: {restaurant?.location.addressOne + ', '+ restaurant?.location.city + ', '+ restaurant?.location.zip +', '+ restaurant?.location.state}</span>
                     <span className="flex p-2 mb-2">
                 {restaurant?.categories?.map(category => (
-                    <span className="p-1 px-3 rounded-full text-sm bg-purple-800 text-white mr-2">{category.title}</span>
+                    <span key={category.alias} className="p-1 px-3 rounded-full text-sm bg-purple-800 text-white mr-2">{category.title}</span>
                 ))}
             </span>
                     <span className="p-2 mb-2 flex flex-col">
